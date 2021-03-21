@@ -1,6 +1,4 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet } from "react-native";
 
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
@@ -17,6 +15,7 @@ function MyStack() {
   return (
     <Stack.Navigator
       screenOptions={{
+       
         headerStyle: {
           backgroundColor: "#621FF7",
         },
@@ -29,17 +28,17 @@ function MyStack() {
       <Stack.Screen
         name="UsersList"
         component={UsersList}
-        options={{ title: "Users List" }}
+        options={{ title: "List" }}
       />
       <Stack.Screen
         name="CreateUserScreen"
         component={CreateUserScreen}
-        options={{ title: "Create a New User" }}
+        options={{ title: "Create a New Contact" }}
       />
       <Stack.Screen
         name="UserDetailScreen"
         component={UserDetailScreen}
-        options={{ title: "User Detail" }}
+        options={{ title: "Info" }}
       />
     </Stack.Navigator>
   );
@@ -52,12 +51,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

@@ -6,6 +6,7 @@ import {
   Alert,
   ActivityIndicator,
   StyleSheet,
+  Text
 } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
@@ -84,6 +85,7 @@ const UserDetailScreen = (props) => {
   return (
     <ScrollView style={styles.container}>
       <View>
+        <Text>phone:</Text>
         <TextInput
           placeholder="Name"
           autoCompleteType="username"
@@ -93,6 +95,7 @@ const UserDetailScreen = (props) => {
         />
       </View>
       <View>
+        <Text>Email</Text>
         <TextInput
           autoCompleteType="email"
           placeholder="Email"
@@ -102,6 +105,7 @@ const UserDetailScreen = (props) => {
         />
       </View>
       <View>
+        <Text>Phone:</Text>
         <TextInput
           placeholder="Phone"
           autoCompleteType="tel"
@@ -114,11 +118,13 @@ const UserDetailScreen = (props) => {
         <Button
           title="Delete"
           onPress={() => openConfirmationAlert()}
-          color="#E37399"
+          color="darkred"
         />
       </View>
       <View>
-        <Button title="Update" onPress={() => updateUser()} color="#19AC52" />
+        <Button title="Update"
+                onPress={() => updateUser()} 
+                color="lightblue" />
       </View>
     </ScrollView>
   );
